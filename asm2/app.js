@@ -9,7 +9,6 @@ var usersRouter = require('./routes/users');
 // 1A. config location of routers
 var toyRouter = require('./routes/toy');
 var brandRouter = require('./routes/brand');
-var categoryRouter = require('./routes/category');
 var manufacturerRouter = require('./routes/manufacturer');
 
 var app = express();
@@ -44,7 +43,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/toy', toyRouter);
 app.use('/brand', brandRouter);
-app.use('/category', categoryRouter);
 app.use('/manufacturer', manufacturerRouter);
 
 // catch 404 and forward to error handler
