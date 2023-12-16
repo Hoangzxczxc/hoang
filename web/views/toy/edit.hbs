@@ -1,0 +1,35 @@
+<form action="/toy/edit/{{ toy._id }}" method="post">
+   <h1>Edit toy</h1>
+   Toy model: <input type="text" name="model" id="" required value="{{ toy.model }}">
+   <br><br>
+   Toy image: <input type="url" name="image" id="" required value="{{ toy.image }}">
+   <img src="{{ toy.image }}" alt="" width="100" height="100">
+   <br><br>
+   Toy size:
+   {{#equal toy.size "S"}}
+   <input type="radio" name="size" value="S" checked="true"> S
+   <input type="radio" name="size" value="L"> L
+   <input type="radio" name="size" value="XL"> XL
+   <input type="radio" name="size" value="XXL"> XXL
+   {{/equal}}
+   {{#equal toy.size "L"}}
+   <input type="radio" name="size" value="S"> S
+   <input type="radio" name="size" value="L" checked="true"> L
+   <input type="radio" name="size" value="XL"> XL
+   <input type="radio" name="size" value="XXL"> XXL
+   {{/equal}}
+   {{#equal toy.size "XL"}}
+   <input type="radio" name="size" value="S" > S
+   <input type="radio" name="size" value="L"> L
+   <input type="radio" name="size" value="XL" checked="true"> XL
+   <input type="radio" name="size" value="XXL"> XXL
+   {{/equal}}
+   {{#equal toy.size "XXL"}}
+   <input type="radio" name="size" value="S"> S
+   <input type="radio" name="size" value="L"> L
+   <input type="radio" name="size" value="XL"> XL
+   <input type="radio" name="size" value="XXL"  checked="true"> XXL
+   {{/equal}}
+   <br><br>
+   <input type="submit" value="Edit">
+</form>
