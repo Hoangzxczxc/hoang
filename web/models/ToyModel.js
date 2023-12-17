@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 var ToySchema = mongoose.Schema({
     model: String, 
-    Size: String,
-    Price: String,
+    size: String,
+    price: String,
     image: String,
     brand: {
         type: mongoose.Schema.Types.ObjectId,
