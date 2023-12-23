@@ -1,6 +1,10 @@
 <form action="/toy/edit/{{ toy._id }}" method="post">
    <h1>Edit toy</h1>
-   Toy model: <input type="text" name="model" id="" required value="{{ toy.model }}">
+   {{!-- Toy model:  --}}
+   <label for="model">Toy Model:</label>
+   <input type="text" name="model" id="" required value="{{ toy.model }}">
+   <br><br>
+   Toy price: <input type="text" name="price" id="" required value="{{ toy.price }}">
    <br><br>
    Toy image: <input type="url" name="image" id="" required value="{{ toy.image }}">
    <img src="{{ toy.image }}" alt="" width="100" height="100">
